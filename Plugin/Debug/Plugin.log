@@ -1,0 +1,9 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: каталог Output заканчивается не косой чертой.  Этот экземпляр сборки добавит косую черту, поскольку она необходима для правильного определения каталога Output.
+  dllmain.cpp
+C:\Users\www\Desktop\Hud\Plugin\dllmain.cpp(345,42): warning C4101: ex: неиспользованная локальная переменная
+  Создание кода
+  1 of 2244 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Plugin.vcxproj -> C:\Users\www\Desktop\Hud\build\Hud.asi

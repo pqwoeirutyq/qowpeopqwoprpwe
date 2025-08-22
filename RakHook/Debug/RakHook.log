@@ -1,0 +1,8 @@
+﻿  offsets.cpp
+  rakhook.cpp
+  samp.cpp
+  BitStream.cpp
+  DS_HuffmanEncodingTree.cpp
+  PluginInterface.cpp
+  StringCompressor.cpp
+  RakHook.vcxproj -> C:\Users\www\Desktop\Hud\build\dependencies\RakHook\RakHook.lib
