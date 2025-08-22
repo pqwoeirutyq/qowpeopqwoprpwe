@@ -1,0 +1,6 @@
+﻿  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  MinHook.vcxproj -> C:\Users\www\Desktop\Hud\build\dependencies\MinHook\MinHook.lib
